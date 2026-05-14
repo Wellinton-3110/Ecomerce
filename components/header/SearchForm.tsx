@@ -68,7 +68,7 @@ export const SearchForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex relative items-center w-screen h-[7vh] bg-amber-300 p-1 z-2 /-> responsive ">
           <button type="submit">
-            <CiSearch className="w-[30px] h-[30px] z-2 cursor-pointer bg-amber-50 rounded-r-none ml-[70%] /-> responsive max-lg:rounded-r-none max-lg:rounded-l-sm max-lag:w-[25px] max-lg:h-[25px] max-lg:ml-[45%] max-lg:mt-[-26%]" />
+            <CiSearch className="w-[30px] h-[30px] z-2 cursor-pointer bg-amber-50 rounded-r-none ml-[70%] /-> responsive max-lg:rounded-r-none max-lg:rounded-l-sm max-lag:w-[25px] max-lg:h-[25px] max-lg:ml-[49%] max-lg:mt-[-26%]" />
           </button>
           <input
             className="w-[200px] h-[30px] ml-5 bg-amber-50 outline-none /-> responsive max-lg:w-[130px] max-lg:h-[25px] max-sm:ml-[21%] max-sm:translate-x-[-50%] max-sm:mt-[-2%]"
