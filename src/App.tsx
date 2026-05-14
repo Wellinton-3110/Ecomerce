@@ -108,7 +108,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route
-              path="/"
+              path="/Ecomerce"
               element={<HomePage count={count} setCount={setCount} />}
             />
             <Route path="/userPage/:id" element={<UserPage />} />
