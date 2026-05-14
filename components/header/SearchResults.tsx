@@ -30,14 +30,14 @@ export const SearchResults = (props: Produtos[]) => {
     >
       <div className="relative w-[100%] h-full flex p-5 items-center justify-center /->responsite max-sm:gap-2">
         <IoCloseOutline
-          className="w-[40px] h-[40px] absolute top-0 right-0 text-white/80 /-> responsive max-sm:w-[30px] max-sm:h-[30px]"
+          className="w-[40px] h-[40px] absolute top-0 right-5 text-white/80 /-> responsive max-lg:right-1.5 max-lg:w-[23px] max-lg:h-[23px]"
           onClick={() => fecharBusca()}
         />
         <div className="absolute top-5 left-1 w-[100%] h-[90%] gap-5 overflow-x-scroll flex">
           {props.buscaProdutos.map((item) => {
             return (
               <li
-                className="relative h-[270px] w-[180px] list-none  bg-white border-green-400 border-[1px] text-center rounded-lg flex-shrink-0 /->responsive max-lg:w-[110px] max-lg:h-[195px]"
+                className="relative h-[250px] w-[160px] list-none  bg-white border-green-400 border-[1px] text-center rounded-lg flex-shrink-0 /->responsive max-lg:w-[110px] max-lg:h-[195px]"
                 key={item.id}
               >
                 <img
@@ -45,7 +45,7 @@ export const SearchResults = (props: Produtos[]) => {
                   src={`https://dbmercadopagopostgre.onrender.com/${item.img}`}
                   alt=""
                 />
-                <i className="w-[100%] h-[30px] flex items-center left-0 font-bold absolute mt-1.5 text-[14px]">
+                <i className="w-[100%] h-[30px] flex items-center left-0 font-bold absolute mt-0.5 text-[12px]">
                   <p className="absolute w-[100%] left-[50%] translate-x-[-50%] overflow-y-clip /->responsive max-sm:text-[10px]">
                     {item.nome}
                   </p>

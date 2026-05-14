@@ -45,6 +45,8 @@ export const SearchForm = () => {
   } = useForm<SubmitItems>();
 
   const onSubmit = (dados: SubmitItems) => {
+    console.log("oiiii");
+
     const dadosDaBusca = data.filter((item) => {
       return item.nome.toLowerCase().includes(dados.buscaProduto.toLowerCase());
     });
@@ -65,18 +67,18 @@ export const SearchForm = () => {
     <div className="absolute h-[7vh] w-screen">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex relative items-center w-screen h-[7vh] bg-amber-300 p-1 z-2 /-> responsive ">
+          <button type="submit">
+            <CiSearch className="w-[30px] h-[30px] z-2 cursor-pointer bg-amber-50 rounded-r-none ml-[70%] /-> responsive max-lg:rounded-r-none max-lg:rounded-l-sm max-lag:w-[25px] max-lg:h-[25px] max-lg:ml-[40%] max-lg:mt-[-26%]" />
+          </button>
           <input
-            className="w-[200px] h-[30px] ml-5 bg-amber-50 rounded-l-sm outline-none /-> responsive max-lg:w-[130px] max-lg:h-[25px] max-sm:ml-[21%] max-sm:translate-x-[-50%] max-sm:mt-[-2%]"
+            className="w-[200px] h-[30px] ml-5 bg-amber-50 outline-none /-> responsive max-lg:w-[130px] max-lg:h-[25px] max-sm:ml-[21%] max-sm:translate-x-[-50%] max-sm:mt-[-2%]"
             type="text"
             placeholder="buscar produto"
             {...register("buscaProduto", { required: true, minLength: 1 })}
           />
 
-          <button type="submit">
-            <CiSearch className="w-[30px] h-[30px] cursor-pointer bg-amber-50 rounded-r-sm /-> responsive max-lag:w-[25px] max-lg:h-[25px] max-sm:ml-[-230%] max-sm:mt-[-25%] " />
-          </button>
           {errors.buscaProduto && (
-            <p className="text-red-500 flex text-[13px] ml-1 /-> responsive max-lg:text-[11px] max-sm:absolute max-sm:bottom-1 max-sm:left-[50%] max-sm:translate-x-[-40%] max-sm:text-[8px] max-sm:w-[200px] max-sm:font-bold">
+            <p className="text-red-500 flex text-[13px] ml-1 /-> responsive max-lg:text-[11px] max-lg:absolute max-sm:bottom-1 max-sm:left-[25%] max-sm:translate-x-[-40%] max-sm:text-[8px] max-sm:w-[200px] max-sm:font-bold">
               Digite pelo menos um produto para busca
             </p>
           )}
