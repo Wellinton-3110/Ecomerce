@@ -26,9 +26,9 @@ export const SearchResults = (props: Produtos[]) => {
 
   return (
     <div
-      className={`w-screen h-[33vh] bg-black/90 border-b-2 absolute top-[100%] z-10 flex items-center justify-center ${resultadoBusca ? "hidden" : ""} `}
+      className={`absolute ml-[-4px] w-screen h-[33vh] bg-black/90 border-b-2 top-[100%] z-10 flex items-center justify-center ${resultadoBusca ? "hidden" : ""} `}
     >
-      <div className="relative w-[100%] h-full flex p-5 items-center justify-center /->responsite max-sm:gap-2">
+      <div className="relative w-[95%] h-full flex p-5 items-center justify-center /->responsite max-lg:gap-2">
         <IoCloseOutline
           className="w-[40px] h-[40px] absolute top-0 right-5 text-white/80 /-> responsive max-lg:right-1.5 max-lg:w-[23px] max-lg:h-[23px]"
           onClick={() => fecharBusca()}
