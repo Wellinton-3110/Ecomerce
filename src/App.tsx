@@ -113,7 +113,7 @@ function App() {
             />
             <Route path="/userPage/:id" element={<UserPage />} />
             <Route path="/minhasCompras/:id" element={<UserPurchases />} />
-            <Route path="/register" element={<LoginRegister />} />
+            <Route path="/Ecomerce/register" element={<LoginRegister />} />
             <Route path="/atualizarDados/:id" element={<UpdateUserData />} />
             <Route path="/dadosDoUsuário/:id" element={<UserData />} />
           </Routes>

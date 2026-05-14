@@ -39,7 +39,7 @@ const UserOptions = ({ options }) => {
         onClick={() => {
           SetUserOn({});
         }}
-        to={"/"}
+        to={"/Ecomerce"}
         className="flex flex-col items-center justify-center w-[100%] h-[40px] hover:bg-amber-400 border-[1px] border-black"
       >
         <button className="cursor-pointer">Sair</button>

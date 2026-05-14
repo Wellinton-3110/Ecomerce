@@ -28,15 +28,15 @@ export const SearchResults = (props: Produtos[]) => {
     <div
       className={`w-screen h-[33vh] bg-black/90 border-b-2 absolute top-[100%] z-10 flex items-center justify-center ${resultadoBusca ? "hidden" : ""} `}
     >
-      <div className="relative w-[98%] h-full flex p-5 gap-10 items-center justify-center overflow-x-scroll overflow-y-hidden /->responsite max-sm:gap-2">
+      <div className="relative w-[100%] h-full flex p-5 gap-10 items-center justify-center overflow-x-scroll overflow-y-hidden /->responsite max-sm:gap-2">
         {props.buscaProdutos.map((item) => {
           return (
             <li
-              className="relative h-[270px] w-[180px] list-none bg-white border-green-400 border-[1px] text-center rounded-lg flex-shrink-0 /->responsive max-sm:w-[120px] max-sm:h-[215px]"
+              className="relative h-[270px] w-[180px] list-none bg-white border-green-400 border-[1px] text-center rounded-lg flex-shrink-0 /->responsive max-lg:w-[110px] max-lg:h-[195px]"
               key={item.id}
             >
               <img
-                className="w-[100%] h-[155px] bg-black/50 /->responsive max-sm:h-[120px]"
+                className="w-[100%] h-[150px] bg-black/50 ->responsive max-lg:h-[110px]"
                 src={`https://dbmercadopagopostgre.onrender.com/${item.img}`}
                 alt=""
               />
@@ -49,7 +49,7 @@ export const SearchResults = (props: Produtos[]) => {
                 R${item.valor_item}
               </i>
               <AddProductsButton
-                className="h-[45px] text-[14px] font-bold w-[100%] bg-green-500 hover:bg-green-400 p-1.5 rounded-sm w-[100%] absolute bottom-0 left-0 /->responsive max-sm:text-[12px] max-sm:h-[40px]"
+                className="h-[45px] text-[14px] font-bold w-[100%] bg-green-500 hover:bg-green-400 p-1.5 rounded-sm w-[100%] absolute bottom-0 left-0 /->responsive max-lg:text-[10px] max-lg:h-[30px]"
                 id={item.id}
                 setCount={setCount}
               />

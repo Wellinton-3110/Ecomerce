@@ -54,10 +54,10 @@ const LoginRegister = () => {
   return (
     <div className="flex itens-center justify-center bg-black/70 w-full h-full">
       <Link
-        className="absolute top-5 left-15 ->responsive max-sm:left-2 max-sm:top-2"
-        to="/"
+        className="absolute top-5 left-15 ->responsive max-lg:left-2 max-lg:top-2"
+        to="/Ecomerce"
       >
-        <FaCircleArrowLeft className="w-[25px] h-[25px] " />
+        <FaCircleArrowLeft className="w-[25px] h-[25px] max-lg:w-[20px] max-lg:h-[20px]" />
       </Link>
       <form
         className="w-[900px] bg-gray-600 h-[100%] p-5"
@@ -66,7 +66,7 @@ const LoginRegister = () => {
         <div className="flex flex-col mt-5">
           <label className="font-bold">Nome</label>
           <input
-            className="h-[35px] rounded-md mt-1 bg-white/80"
+            className="h-[35px] rounded-md mt-1 bg-white/80 ->responsive max-lg:w-[330px]"
             type="text"
             {...register("nome", {
               required: { value: true, message: "dado obrigatório" },
@@ -82,7 +82,7 @@ const LoginRegister = () => {
         <div className="flex mt-1 flex-col">
           <label className="font-bold">Email</label>
           <input
-            className="h-[35px] rounded-md mt-1 bg-white/80"
+            className="h-[35px] rounded-md mt-1 bg-white/80 ->responsive max-lg:w-[330px]"
             type="text"
             {...register("email", {
               required: { value: true, message: "dado obrigatório" },
@@ -101,7 +101,7 @@ const LoginRegister = () => {
         <div className="flex mt-1 flex-col">
           <label className="font-bold">Senha</label>
           <input
-            className="h-[35px] rounded-md mt-1 bg-white/80"
+            className="h-[35px] rounded-md mt-1 bg-white/80 ->responsive max-lg:w-[330px]"
             type="text"
             {...register("senha", {
               required: { value: true, message: "dado obrigatório" },
@@ -117,7 +117,7 @@ const LoginRegister = () => {
           <label className="font-bold">Cpf</label>
           <input
             placeholder="000.000.000-00"
-            className="h-[35px] rounded-md mt-1 bg-white/80"
+            className="h-[35px] rounded-md mt-1 bg-white/80 ->responsive max-lg:w-[330px]"
             type="number"
             {...register("cpf", {
               required: { value: true, message: "dado obrigatório" },
@@ -146,7 +146,7 @@ const LoginRegister = () => {
           <input
             maxLength={11}
             placeholder="somente números ddd+ número"
-            className="h-[35px] rounded-md mt-1 bg-white/80"
+            className="h-[35px] rounded-md mt-1 bg-white/80 ->responsive max-lg:w-[330px]"
             type="number"
             {...register("numero", {
               required: { value: true, message: "dado obrigatório" },
@@ -171,7 +171,7 @@ const LoginRegister = () => {
           )}
         </div>
         <button
-          className="absolute left-[50%] translate-x-[-50%] top-[50%] bg-green-500 hover:bg-green-400 cursor-pointer w-[150px] h-[50px] rounded-md"
+          className="absolute left-[50%] translate-x-[-50%] top-[50%] bg-green-500 hover:bg-green-400 cursor-pointer w-[150px] h-[50px] rounded-md ->responsive max-lg:top-[70%] max-lg:h-[40px]"
           type="submit"
         >
           Cadastrar

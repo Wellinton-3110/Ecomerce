@@ -27,7 +27,7 @@ export const Items = ({ setCount }: PropsCount) => {
 
   const [paginaAtual, setPaginaAtual] = useState<Page>(1);
 
-  const itemsPorPagina: number = 12;
+  const itemsPorPagina: number = 11;
   const ultimoIndex: number = paginaAtual * itemsPorPagina;
   const indexInicial: number = ultimoIndex - itemsPorPagina;
 
@@ -37,7 +37,7 @@ export const Items = ({ setCount }: PropsCount) => {
 
   return (
     <div className="flex flex-col h-[90vh] relative w-screen p-5 mt-10 max-sm:p-0.5">
-      <div className="relative w-[100%] ml-[50%] translate-x-[-50%] p-15 gap-7 flex flex-wrap justify-around scroll-smooth overflow-scroll overflow-x-hidden">
+      <div className="relative w-[100%] ml-[50%] translate-x-[-50%] p-15 gap-7 flex flex-wrap justify-around scroll-smooth overflow-scroll overflow-x-hidden ->responsive max-lg:p-10">
         {itemsAtuais.map((item: Produtos, index: number) => {
           return (
             <li

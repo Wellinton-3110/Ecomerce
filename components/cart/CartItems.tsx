@@ -1,12 +1,14 @@
 import { use, useContext, useEffect, useState } from "react";
 import { DataContext } from "../../src/App";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import { IoMdCopy } from "react-icons/io";
 
 type viewCartItems = {
   hidden: boolean;
 };
 
 const CartItems = ({ hidden }: viewCartItems) => {
+  const [qrCode, setQrCode] = useState("");
   const [qrCodeBase64, setQrCodeBase64] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingImg, setLoadingImg] = useState(false);
@@ -42,7 +44,6 @@ const CartItems = ({ hidden }: viewCartItems) => {
       );
 
       const data = await response.json();
-      console.log(data);
 
       if (!response.ok) {
         setError(data.error || "Erro ao gerar QR Code");
@@ -50,6 +51,7 @@ const CartItems = ({ hidden }: viewCartItems) => {
       }
 
       // QR code base64 retornado pelo backend
+      setQrCode(data.qr_code);
       setQrCodeBase64(data.qr_code_base64);
       setPagamentoId(data.id);
     } catch (err) {
@@ -57,6 +59,15 @@ const CartItems = ({ hidden }: viewCartItems) => {
     } finally {
       setLoadingImg(true);
       setLoading(false);
+    }
+  };
+
+  const copiarQrCode = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("Copiado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao copiar o QR Code:", error);
     }
   };
 
@@ -239,7 +250,14 @@ const CartItems = ({ hidden }: viewCartItems) => {
         <img
           src={`data:image/png;base64,${qrCodeBase64}`}
           alt="qrCode"
-          className={`${loadingImg ? "" : "hidden"} absolute w-[200px] h-[200px] bg-black  left-[50%] translate-x-[-50%] top-[40%]`}
+          className={`${loadingImg ? "" : "hidden"} absolute w-[200px] h-[200px] bg-black  left-[50%] translate-x-[-50%] top-[20%]`}
+        />
+        <span className="w-[350px] h-[100px] text-white text-[10px] text-center absolute translate-x-[-50%] top-[60%] p-5 overflow-x-scroll left-[50%] ->responsive max-lg:w-[250px]">{`${qrCode}`}</span>
+        <IoMdCopy
+          onClick={() => {
+            copiarQrCode(qrCode);
+          }}
+          className="w-[40px] h-[40px] absolute top-[75%] left-[50%] translate-x-[-50%] text-white hover:text-white/40 cursor-pointer ->responsive max-lg:w-[30px] max-lg:h-[30px] top-[80%]"
         />
         <div
           className={`absolute flex items-center justify-center bottom-0 w-[100%] h-[60px]  font-bold ${pagamentoStatus === "pending" ? "bg-amber-400" : "bg-green-400"}`}
