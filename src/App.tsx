@@ -5,7 +5,7 @@ import LoginRegister from "../components/header/LoginRegister";
 import { UserPurchases } from "../components/userInterface/UserPurchases";
 import UpdateUserData from "../components/userInterface/UpdateUserData";
 import UserData from "../components/userInterface/UserData";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 
 type Produtos = {
@@ -105,10 +105,10 @@ function App() {
           setResultadoBuca,
         }}
       >
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route
-              path="/Ecomerce"
+              path="/"
               element={<HomePage count={count} setCount={setCount} />}
             />
             <Route path="/userPage/:id" element={<UserPage />} />
@@ -117,7 +117,7 @@ function App() {
             <Route path="/atualizarDados/:id" element={<UpdateUserData />} />
             <Route path="/dadosDoUsuário/:id" element={<UserData />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </DataContext.Provider>
     </div>
   );

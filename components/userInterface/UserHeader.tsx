@@ -80,7 +80,7 @@ export const UserHeader = () => {
             />
           </button>
           {errors.buscaProduto && (
-            <p className="text-red-500 flex text-[13px] ml-1 /-> responsive max-lg:text-[11px] max-sm:absolute max-sm:bottom-1 max-sm:left-[50%] max-sm:translate-x-[-40%] max-sm:text-[8px] max-sm:w-[200px] max-sm:font-bold">
+            <p className="absolute bottom-0 left-4 text-red-500 flex text-[11px] ml-1 /-> responsive max-lg:text-[9px] max-lg:left-2">
               Digite pelo menos um produto para busca
             </p>
           )}

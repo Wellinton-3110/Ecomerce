@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { DataContext } from "../../src/App";
 import { Link } from "react-router-dom";
+import { set } from "react-hook-form";
 const UserOptions = ({ options }) => {
   const context = useContext(DataContext);
   if (!context) {
     return null;
   }
 
-  const { userOn, SetUserOn } = context;
+  const { userOn, setUserOn } = context;
 
   if (userOn) {
     console.log(userOn.id);
@@ -37,9 +38,10 @@ const UserOptions = ({ options }) => {
       </Link>
       <Link
         onClick={() => {
-          SetUserOn({});
+          setUserOn({});
+          localStorage.removeItem("auth");
         }}
-        to={"/Ecomerce/"}
+        to={"/"}
         className="flex flex-col items-center justify-center w-[100%] h-[40px] hover:bg-amber-400 border-[1px] border-black"
       >
         <button className="cursor-pointer">Sair</button>

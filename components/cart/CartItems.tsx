@@ -182,7 +182,7 @@ const CartItems = ({ hidden }: viewCartItems) => {
 
   return (
     <div
-      className={`cartItems flex flex-col top-[100%] absolute z-20 w-[500px] h-[850px] bg-gray-50 border-l-[2px] border-green-300 right-1 ${hidden ? "hidden" : ""} /-> responsive max-lg:w-[300px] max-lg:h-[600px] [@media(max-height:750px)]:h-[580px] [@media(max-height:750px)]:w-[330px]`}
+      className={`cartItems flex flex-col top-[100%] absolute z-20 w-[500px] h-[800px] bg-gray-50 border-l-[2px] border-green-300 right-1 ${hidden ? "hidden" : ""} /-> responsive max-lg:w-[300px] max-lg:h-[600px] [@media(max-height:750px)]:h-[580px] [@media(max-height:750px)]:w-[330px]`}
     >
       <div className="h-[95%] w-[99%] overflow-scroll absolute">
         {produtosNoCarrinho.map((item) => {

@@ -83,7 +83,7 @@ export const SearchForm = () => {
           />
 
           {errors.buscaProduto && (
-            <p className="text-red-500 flex text-[13px] ml-1 /-> responsive max-lg:text-[11px] max-lg:absolute max-sm:bottom-1 max-sm:left-[25%] max-sm:translate-x-[-40%] max-sm:text-[8px] max-sm:w-[200px] max-sm:font-bold">
+            <p className="absolute left-4 bottom-0 text-red-500 flex text-[13px] ml-1 /-> responsive max-lg:text-[10px] max-lg:left-2 ">
               Digite pelo menos um produto para busca
             </p>
           )}
