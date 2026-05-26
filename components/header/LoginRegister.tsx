@@ -55,7 +55,7 @@ const LoginRegister = () => {
     <div className="flex itens-center justify-center bg-black/70 w-full h-full">
       <Link
         className="absolute top-5 left-15 ->responsive max-lg:left-2 max-lg:top-2"
-        to="/Ecomerce"
+        to="/"
       >
         <FaCircleArrowLeft className="w-[25px] h-[25px] max-lg:w-[20px] max-lg:h-[20px]" />
       </Link>

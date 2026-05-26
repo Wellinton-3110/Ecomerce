@@ -128,7 +128,7 @@ const LoginForm = ({ loginForm }) => {
           >
             Login
           </button>
-          <Link to="register">
+          <Link to="/register">
             <button className="w-[50%] bg-green-400 hover:bg-green-300 border-black/70 border-[0.1px] h-[40px] ">
               Cadastro
             </button>
